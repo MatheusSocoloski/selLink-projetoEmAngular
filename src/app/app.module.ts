@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,7 +10,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { VendasComponent } from './pages/vendas/vendas.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { SnackbarComponent } from './messages/snackbar/snackbar.component'
+import { PageTesteComponent } from './pages/page-teste/page-teste.component';
+import { PageTesteFilhoComponent } from './pages/page-teste-filho/page-teste-filho.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { SnackbarComponent } from './messages/snackbar/snackbar.component'
     SidebarComponent,
     FooterComponent,
     VendasComponent,
-    SnackbarComponent
+    PageTesteComponent,
+    PageTesteFilhoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

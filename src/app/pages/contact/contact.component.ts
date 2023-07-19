@@ -8,11 +8,12 @@ import { ContactService } from 'src/app/services/contact.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+  show: boolean = false;
 
   constructor(private contactService: ContactService){}
 
-  testandoBotao(){
-    console.log('formulario enviado com sucesso!');
+  testandoBotao(): void{
+    this.show = !this.show
   }
 
 }
