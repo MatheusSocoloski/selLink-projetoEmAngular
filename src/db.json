@@ -1,0 +1,8 @@
+{
+    "times":[
+    {"id": 1, "time": "Gremio", "classificacao": 3, "corCamisa": "Branco e Azul"},
+    {"id": 2, "time": "Flamengo", "classificacao": 2, "corCamisa": "Vermelho e Preto"},
+    {"id": 3, "time": "Botafogo", "classificacao": 1, "corCamisa": "Preto"},
+    {"id": 4, "time": "Internacional", "classificacao": 20, "corCamisa": "Vermelho e Branco"}
+    ]
+}

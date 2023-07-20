@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { VendasComponent } from './pages/vendas/vendas.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { PageTesteComponent } from './pages/page-teste/page-teste.component';
 import { PageTesteFilhoComponent } from './pages/page-teste-filho/page-teste-filho.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { PageTesteFilhoComponent } from './pages/page-teste-filho/page-teste-fil
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

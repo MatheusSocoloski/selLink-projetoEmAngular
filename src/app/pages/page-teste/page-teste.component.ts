@@ -13,14 +13,11 @@ export class PageTesteComponent {
 
   camisa: string = ''
 
-  times: Time [] =[
-    {nome:'Grêmio', classificacao: 3, corCamisa:'Azul e branca'},
-    {nome:'Botafogo', classificacao: 1, corCamisa:'Preto'},
-    {nome:'Flamengo', classificacao: 2, corCamisa:'Vermelha e preto'},
-    {nome:'Internacional', classificacao: 20, corCamisa:'Vermelha e branca'},
-  ];
+  times: Time [] =[];
 
-  constructor(private testeService: TesteService){}
+  constructor(private testeService: TesteService){
+    this.getTimes
+  }
 
 
   onChangeNumber(){
@@ -36,5 +33,8 @@ mostrarCorCamisa(time: Time){
     this.times = this.testeService.remove(this.times, time);
   }
 
+    getTimes(): void{
+      this.testeService.getAll().subscribe((times) => (this.times = times))
+    }
 }
 
