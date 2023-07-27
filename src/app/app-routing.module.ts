@@ -7,7 +7,7 @@ import { VendasComponent } from './pages/vendas/vendas.component';
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'vendas', component: VendasComponent}
+  {path: 'vendas/:categoria', component: VendasComponent }
 ];
 
 @NgModule({

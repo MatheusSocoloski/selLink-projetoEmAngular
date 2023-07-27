@@ -1,1 +1,73 @@
-<p>testando a tela de vendas </p>
+<div class="container">
+    <h1>Vendas</h1>
+    <h2>Categoria selecionada: {{ categoriaSelecionada }}</h2>
+  
+    <!-- Exibir itens da categoria 'carros' -->
+    <div class="card" *ngIf="categoriaSelecionada === 'carros'">
+      <div *ngFor="let carro of carros">
+        <img [src]="carro.imagem" alt="Imagem do item">
+        <h3>{{ carro.nome }}</h3>
+        <p>{{ carro.descricao }}</p>
+      </div>
+    </div>
+  
+    <!-- Exibir itens da categoria 'casas' -->
+    <div class="card" *ngIf="categoriaSelecionada === 'casas'">
+      <div *ngFor="let casa of casas">
+        <img [src]="casa.imagem" alt="Imagem do item">
+        <h3>{{ casa.nome }}</h3>
+        <p>{{ casa.descricao }}</p>
+      </div>
+    </div>
+  
+    <!-- Exibir itens da categoria 'comidas' -->
+    <div class="card" *ngIf="categoriaSelecionada === 'comidas'">
+      <div *ngFor="let comida of comidas">
+        <img [src]="comida.imagem" alt="Imagem do item">
+        <h3>{{ comida.nome }}</h3>
+        <p>{{ comida.descricao }}</p>
+      </div>
+    </div>
+ 
+     <div class="card" *ngIf="categoriaSelecionada === 'tecnologias'">
+          <div *ngFor="let tecnologia of tecnologias">
+           <img [src]="tecnologia.imagem" alt="Imagem do item">
+            <h3>{{ tecnologia.nome }}</h3>
+          <p>{{ tecnologia.descricao }}</p>
+      </div>   
+    </div> 
+
+    <div class="card" *ngIf="categoriaSelecionada === 'esportes'">
+        <div *ngFor="let esporte of esportes">
+     <img [src]="esporte.imagem" alt="Imagem do item">
+     <h3>{{ esporte.nome }}</h3>
+     <p>{{ esporte.descricao }}</p>
+    </div>
+</div>
+
+ <div class="card" *ngIf="categoriaSelecionada === 'brinquedos'">
+    <div *ngFor="let brinquedo of brinquedos">
+      <img [src]="brinquedo.imagem" alt="Imagem do item">
+      <h3>{{ brinquedo.nome }}</h3>
+      <p>{{ brinquedo.descricao }}</p>
+    </div>
+</div>
+
+    <div class="card" *ngIf="categoriaSelecionada === 'construcoes'">
+        <div *ngFor="let construcao of construcoes">
+          <img [src]="construcao.imagem" alt="Imagem do item">
+          <h3>{{ construcao.nome }}</h3>
+          <p>{{ construcao.descricao }}</p>
+        </div>
+    </div>
+          
+  
+    <div class="card" *ngIf="categoriaSelecionada === 'saudes'">
+      <div *ngFor="let saude of saudes">
+        <img [src]="saude.imagem" alt="Imagem do item">
+        <h3>{{ saude.nome }}</h3>
+        <p>{{ saude.descricao }}</p>
+      </div>
+    </div>
+  </div>
+  

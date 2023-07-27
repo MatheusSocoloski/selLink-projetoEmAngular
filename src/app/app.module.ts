@@ -7,12 +7,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { VendasComponent } from './pages/vendas/vendas.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { PageTesteComponent } from './pages/page-teste/page-teste.component';
-import { PageTesteFilhoComponent } from './pages/page-teste-filho/page-teste-filho.component';
+
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -20,11 +19,9 @@ import { PageTesteFilhoComponent } from './pages/page-teste-filho/page-teste-fil
     AppComponent,
     HomeComponent,
     ContactComponent,
-    SidebarComponent,
     FooterComponent,
     VendasComponent,
-    PageTesteComponent,
-    PageTesteFilhoComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
