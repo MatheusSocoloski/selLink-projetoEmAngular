@@ -1,14 +1,18 @@
-<div class="container">
-  <div *ngIf="categoriaSelecionada">
-  <h1>Vendas</h1>
-  <input type="text" class="btn-text" [(ngModel)]="filtro" placeholder="Não encontrou o que queria? procure aqui">
-  <button (click)="aplicarFiltro()" class="btn-procura">Pesquisar</button>
-  <button (click)="limparFiltro()" class="btn-procura">Limpar</button>
-  <h2>Categoria selecionada: {{ categoriaSelecionada }}</h2>
-</div>
-  <div class="card" *ngFor="let item of (filtro ? itensFiltrados : categorias[categoriaSelecionada])">
-    <img [src]="item.imagem" alt="Imagem do item">
-    <h3>{{ item.nome }}</h3>
-    <p>{{ item.descricao }}</p>
+<body>
+  <div class="wrapper">
+    <div class="camp-pesquisa" *ngIf="categoriaSelecionada">
+      <h2>Categoria selecionada: {{ categoriaSelecionada }}</h2>
+      <input type="text" class="btn-text" [(ngModel)]="filtro" placeholder="Não encontrou o que queria? procure aqui">
+      <button (click)="aplicarFiltro()" class="btn-procura">Pesquisar</button>
+      <button (click)="limparFiltro()" class="btn-limpa">Limpar</button>
+    </div>
+
+    <div class="container">
+      <div class="card" *ngFor="let item of (filtro ? itensFiltrados : categorias[categoriaSelecionada])">
+        <img [src]="item.imagem" alt="Imagem do item">
+        <h3>{{ item.nome }}</h3>
+        <p>{{ item.descricao }}</p>
+      </div>
+    </div>
   </div>
-</div>
+</body>

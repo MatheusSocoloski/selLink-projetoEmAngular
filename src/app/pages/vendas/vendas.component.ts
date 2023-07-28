@@ -10,8 +10,8 @@ import { VendasService, ItemVenda } from 'src/app/services/vendas.service';
 export class VendasComponent implements OnInit {
   categoriaSelecionada!: string;
   categorias: { [key: string]: ItemVenda[] } = {};
-  filtro: string = ''; // Variável para armazenar o valor do filtro
-  itensFiltrados: ItemVenda[] = []; // Array para armazenar os itens filtrados
+  filtro: string = ''; 
+  itensFiltrados: ItemVenda[] = []; 
 
   constructor(private route: ActivatedRoute, private vendasService: VendasService) { }
 

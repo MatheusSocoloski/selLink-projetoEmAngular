@@ -2,10 +2,11 @@
 
 footer {
     font-family: 'Roboto', sans-serif;
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
+    padding: 30px .2px;
     background-color: #FF4500;
     color: black;
     text-align: center;
