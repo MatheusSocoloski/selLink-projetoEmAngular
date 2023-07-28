@@ -9,30 +9,38 @@ import { VendasService, ItemVenda } from 'src/app/services/vendas.service';
 })
 export class VendasComponent implements OnInit {
   categoriaSelecionada!: string;
-  carros: ItemVenda[] = [];
-  casas: ItemVenda[] = [];
-  comidas: ItemVenda[] = [];
-  brinquedos: ItemVenda[] = [];
-  tecnologias: ItemVenda[] = [];
-  esportes: ItemVenda[] = [];
-  saudes: ItemVenda[] = [];
-  construcoes: ItemVenda[] = [];
- 
+  categorias: { [key: string]: ItemVenda[] } = {};
+  filtro: string = ''; // Variável para armazenar o valor do filtro
+  itensFiltrados: ItemVenda[] = []; // Array para armazenar os itens filtrados
 
   constructor(private route: ActivatedRoute, private vendasService: VendasService) { }
 
   ngOnInit(): void {
+    this.categorias = {
+      carros: this.vendasService.carros,
+      casas: this.vendasService.casas,
+      comidas: this.vendasService.comidas,
+      tecnologias: this.vendasService.tecnologias,
+      esportes: this.vendasService.esportes,
+      brinquedos: this.vendasService.brinquedos,
+      construcoes: this.vendasService.construcoes,
+      saudes: this.vendasService.saudes
+    };
+
     this.route.paramMap.subscribe(params => {
       this.categoriaSelecionada = params.get('categoria')!;
-      this.carros = this.vendasService.carros;
-      this.casas = this.vendasService.casas;
-      this.comidas = this.vendasService.comidas;
-      this.tecnologias = this.vendasService.tecnologias;
-      this.esportes = this.vendasService.esportes;
-      this.brinquedos = this.vendasService.brinquedos;
-      this.construcoes = this.vendasService.construcoes;
-      this.saudes = this.vendasService.saudes;
-      
     });
+  }
+
+
+  aplicarFiltro() {
+    this.itensFiltrados = this.categorias[this.categoriaSelecionada].filter(item =>
+      item.nome.toLowerCase().includes(this.filtro.toLowerCase())
+    );
+  }
+  
+  limparFiltro() {
+    this.filtro = '';
+    this.aplicarFiltro();
   }
 }

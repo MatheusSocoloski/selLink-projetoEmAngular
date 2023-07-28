@@ -1,42 +1,58 @@
 body {
-    grid-template-columns: (3,1fr);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 1300px; /* Alterado para 1300px */
-    margin: 20px auto; /* Centraliza o container na página */
-  }
-  
-  
-  .card {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 1300px;
-    margin: 20px auto;
-  }
-  
-  .card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-  
-  .card p {
-    padding: 10px;
-    background-color: #f2f2f2;
-    text-align: center;
-    font-size: 14px;
-  }
+  grid-template-columns: repeat(3, 1fr);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  .card h3 {
-    display: flex;
-    align-items: center;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
+.container {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1300px; 
+  margin: 20px auto; 
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 1300px;
+  margin: 20px auto;
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.card img {
+  width: 100%;
+  height: 68%;
+  object-fit: cover;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinha o conteúdo do card ao centro */
+}
+
+.card h3 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.card p {
+  padding: 10px;
+  background-color: #f2f2f2;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.btn-text {
+  width: 500px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+.btn-procura {
+  width: 100px;
+  height: 30px;
+  margin-left: 5px;
+}

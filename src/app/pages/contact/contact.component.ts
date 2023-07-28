@@ -12,8 +12,5 @@ export class ContactComponent {
 
   constructor(private contactService: ContactService){}
 
-  testandoBotao(): void{
-    this.show = !this.show
-  }
 
 }
